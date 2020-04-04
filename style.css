@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'GT-America-Standard-Medium';
+    src: url('./fonts/GT-America-Standard-Medium.otf');
+}
+
+@font-face {
+    font-family: 'GT-America-Standard-Medium-Italic';
+    src: url('./fonts/GT-America-Standard-Medium-Italic.otf');
+}
+
+
+body {
+    font-family: 'GT-America-Standard-Medium';
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+i {
+    font-family: 'GT-America-Standard-Medium-Italic';
+    font-style: normal;
+}
+
+.current {
+    color: #d3a629;
+}
+
+/***************************************/
+/* Styles for the background slideshow */
+/***************************************/
+.landing {
+    background-image: url("./images/katynelsonyoga0.jpg");
+}
+
+/*********************************/
+/* Styles for the navbar content */
+/*********************************/
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-top: 9px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+    font-size: 19pt;
+}
+
+#navHeader {
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+#navItems {
+    grid-area: 1 / 5 / 2 / 11;
+    display: flex;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
+    margin-left: 15px;
+    justify-content: space-between;
+}
+
+.navItem a {
+    transition-duration: 0.2s;
+}
+
+.navItem a:not(.current):hover {
+    color: #1c43b5;
+}
+
+/***************************************/
+/* Styles for the main website content */
+/***************************************/
+.main {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 7px;
+    height: 600px;
+}
+
+#mainImage {
+    padding-top: 30px;
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+#mainText {
+    grid-area: 1 / 5 / 2 / 9;
+    margin-left: 15px;
+    margin-right: 70px;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    overflow-wrap: break-word;
+
+    font-size: 19pt;
+}
+
+#mainSubtext {
+    padding-top: 14px;
+    grid-area: 1 / 9 / 2 / 11;
+    line-height: 1.2;
+}
+
+#mainFullWidth {
+    padding-top: 30px;
+    margin-left: 15px;
+    grid-area: 1 / 5 / 2 / 11;
+}
+
+/*******************************/
+/* Styles for the contact form */
+/*******************************/
+#contactForm {
+    display: grid;
+    height: 500px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+#contactFormNameItem {
+    grid-area: 1/ 1 / 2/ 5;
+    border: 2px solid black;
+    padding: 30px;
+    font-family: 'GT-America-Standard-Medium';
+    font-size: 15pt;
+    caret-color: #d3a629;
+    transition: .2s;
+}
+
+#contactFormNameItem::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+#contactFormNameItem:focus {
+    color: #1c43b5;
+    border: 2px solid #1c43b5;
+}
+
+#contactFormEmailItem {
+    grid-area: 1/ 5/ 2/ 7;
+    border: 2px solid black;
+    padding: 30px;
+    font-family: 'GT-America-Standard-Medium';
+    font-size: 15pt;
+    caret-color: #d3a629;
+    transition: .2s;
+}
+
+#contactFormEmailItem::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+#contactFormEmailItem:focus {
+    color: #1c43b5;
+    border: 2px solid #1c43b5;
+}
+
+#contactFormMessageItem {
+    grid-area: 2/ 1/ 6/ 7;
+    border: 2px solid black;
+    padding: 30px;
+    font-family: 'GT-America-Standard-Medium';
+    font-size: 15pt;
+    caret-color: #d3a629;
+    transition: .2s;
+}
+
+#contactFormMessageItem::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+#contactFormMessageItem:focus {
+    color: #1c43b5;
+    border: 2px solid #1c43b5;
+}
+
+#contactFormSubmitItem {
+    grid-area: 6/ 1/ 6/ 2;
+    border: 2px solid black;
+    font-family: 'GT-America-Standard-Medium';
+    font-size: 15pt;
+    color: black;
+    background-color: white;
+    transition: .2s;
+}
+
+#contactFormSubmitItem:hover {
+    color: yellow;
+    border: 2px solid blue;
+}
