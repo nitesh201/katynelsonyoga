@@ -146,6 +146,10 @@ i {
     opacity: 1;
 }
 
+#contactFormNameItem:hover {
+    border: 2px solid #1c43b5;
+}
+
 #contactFormNameItem:focus {
     color: #1c43b5;
     border: 2px solid #1c43b5;
@@ -164,6 +168,10 @@ i {
 #contactFormEmailItem::placeholder {
     color: black;
     opacity: 1;
+}
+
+#contactFormEmailItem:hover {
+    border: 2px solid #1c43b5;
 }
 
 #contactFormEmailItem:focus {
@@ -191,6 +199,10 @@ i {
     border: 2px solid #1c43b5;
 }
 
+#contactFormMessageItem:hover {
+    border: 2px solid #1c43b5;
+}
+
 #contactFormSubmitItem {
     grid-area: 6/ 1/ 6/ 2;
     border: 2px solid black;
@@ -202,6 +214,6 @@ i {
 }
 
 #contactFormSubmitItem:hover {
-    color: yellow;
-    border: 2px solid blue;
+    color: #1c43b5;
+    border: 2px solid #1c43b5;
 }
