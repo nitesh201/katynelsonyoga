@@ -27,6 +27,21 @@ i {
     color: #d3a629;
 }
 
+.noselect {
+    /* iOS Safari */
+    -webkit-touch-callout: none;
+    /* Safari */
+    -webkit-user-select: none;
+    /* Konqueror HTML */
+    -khtml-user-select: none;
+    /* Old versions of Firefox */
+    -moz-user-select: none;
+    /* Internet Explorer/Edge */
+    -ms-user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+    user-select: none;
+}
+
 /***************************************/
 /* Styles for the background slideshow */
 /***************************************/
@@ -48,7 +63,7 @@ i {
     padding-top: 9px;
     padding-bottom: 20px;
     border-bottom: 2px solid black;
-    font-size: 16.5pt;
+    font-size: 23px;
 }
 
 #navHeader {
@@ -74,6 +89,10 @@ i {
     color: #1c43b5;
 }
 
+.hamburgerButton {
+    display: none;
+}
+
 /***************************************/
 /* Styles for the main website content */
 /***************************************/
@@ -86,7 +105,6 @@ i {
     margin-left: 15px;
     margin-right: 15px;
     padding-bottom: 7px;
-    height: 600px;
 }
 
 #mainImage {
@@ -103,8 +121,8 @@ i {
     -ms-hyphens: auto;
     hyphens: auto;
     overflow-wrap: break-word;
-
-    font-size: 16.5pt;
+    overflow: scroll;
+    font-size: 23px;
 }
 
 #mainSubtext {
@@ -134,11 +152,13 @@ i {
 #contactFormNameItem {
     grid-area: 1/ 1 / 2/ 5;
     border: 2px solid black;
-    padding: 25px 30px 30px 30px;
+    padding: 25px 0px 30px 30px;
     font-family: 'GT-America-Standard-Medium';
-    font-size: 15pt;
+    font-size: 23px;
     caret-color: #d3a629;
     transition: .2s;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 #contactFormNameItem::placeholder {
@@ -158,11 +178,13 @@ i {
 #contactFormEmailItem {
     grid-area: 1/ 5/ 2/ 7;
     border: 2px solid black;
-    padding: 25px 30px 30px 30px;
+    padding: 25px 0px 30px 25px;
     font-family: 'GT-America-Standard-Medium';
-    font-size: 15pt;
+    font-size: 23px;
     caret-color: #d3a629;
     transition: .2s;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 #contactFormEmailItem::placeholder {
@@ -182,11 +204,13 @@ i {
 #contactFormMessageItem {
     grid-area: 2/ 1/ 6/ 7;
     border: 2px solid black;
-    padding: 25px 30px 30px 30px;
+    padding: 25px 0px 30px 30px;
     font-family: 'GT-America-Standard-Medium';
-    font-size: 15pt;
+    font-size: 23px;
     caret-color: #d3a629;
     transition: .2s;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 #contactFormMessageItem::placeholder {
@@ -207,7 +231,7 @@ i {
     grid-area: 6/ 1/ 6/ 2;
     border: 2px solid black;
     font-family: 'GT-America-Standard-Medium';
-    font-size: 15pt;
+    font-size: 23px;
     color: black;
     background-color: white;
     transition: .2s;
@@ -216,4 +240,45 @@ i {
 #contactFormSubmitItem:hover {
     color: #1c43b5;
     border: 2px solid #1c43b5;
+}
+
+@media only screen and (max-width: 1200px) {
+    .visible {
+        display: block;
+    }
+
+    .navbar {
+        grid-template-columns: repeat(20, 1fr);
+        display: grid;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-bottom: 2px solid black;
+        font-size: 23px;
+    }
+
+    #navHeader {
+        grid-area: 1 / 1 / 2 / 14;
+    }
+
+    #navItems {
+        grid-area: 1 / 14 / 2 / 20;
+        display: block;
+        text-align: right;
+    }
+
+    .navItem a:not(.current):not(.visible) {
+        display: none;
+    }
+
+    .hamburgerButton {
+        grid-area: 1 / 20 / 2 / 21;
+        display: inline-block;
+        text-align: right;
+        font-size: 30px;
+        line-height: 0.8;
+        margin-left: 10px;
+        cursor: pointer;
+    }
 }
