@@ -46,7 +46,10 @@ i {
 /* Styles for the background slideshow */
 /***************************************/
 .landing {
-    background-image: url("./images/katynelsonyoga0.jpg");
+    height: 100vh;
+    background-image: url("./images/katynelsonyoga4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /*********************************/
@@ -242,6 +245,26 @@ i {
     border: 2px solid #1c43b5;
 }
 
+/**********************************/
+/* Styles for the spotify players */
+/**********************************/
+#players {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 10px;
+}
+
+#playerOne {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+#playerTwo {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
 @media only screen and (max-width: 1200px) {
     .visible {
         display: block;
@@ -281,4 +304,60 @@ i {
         margin-left: 10px;
         cursor: pointer;
     }
+
+    .main {
+        display: block;
+    }
+
+    #mainImage {
+        display: block;
+    }
+
+    #mainText {
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #mainSubtext {
+        display: block;
+        padding-top: 0px;
+    }
+
+    #mainFullWidth {
+        margin-left: 0px;
+    }
+
+    #players {
+        display: block;
+        margin-left: 0px;
+    }
+
+    #playerOne {
+        display: block;
+        height: 400px;
+        margin-bottom: 15px;
+    }
+
+    #playerTwo {
+        display: block;
+        height: 400px;
+    }
+
+    #contactFormNameItem {
+        grid-area: 1/ 1/ 2/ 7
+    }
+
+    #contactFormEmailItem {
+        grid-area: 2/ 1/ 3/ 7
+    }
+
+    #contactFormMessageItem {
+        grid-area: 3/ 1/ 6/ 7;
+    }
+
+    #contactFormSubmitItem {
+        grid-area: 6/ 1/ 6/ 7;
+    }
+
 }
