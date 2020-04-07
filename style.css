@@ -286,6 +286,7 @@ i {
         margin-left: 0px;
         margin-right: 0px;
     }
+
     .visible {
         display: block;
     }
@@ -310,11 +311,13 @@ i {
         display: block;
         text-align: right;
     }
+
     #enterItems {
         grid-area: 1 / 14 / 2 / 21;
         display: block;
         text-align: right;
     }
+
     .navItem a:not(.current):not(.visible) {
         display: none;
     }
@@ -383,5 +386,34 @@ i {
     #contactFormSubmitItem {
         grid-area: 6/ 1/ 6/ 7;
     }
+}
 
+@media only screen and (max-width: 500px) {
+    .navbar {
+        font-size: 21px;
+    }
+
+    #mainText {
+        font-size: 21px;
+    }
+
+    #contactFormNameItem {
+        font-size: 21px
+    }
+
+    #contactFormEmailItem {
+        font-size: 21px
+    }
+
+    #contactFormMessageItem {
+        font-size: 21px
+    }
+
+    #contactFormSubmitItem {
+        font-size: 21px
+    }
+
+    .hamburgerButton {
+        font-size: 28px;
+    }
 }
