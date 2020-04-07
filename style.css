@@ -23,6 +23,12 @@ i {
     font-style: normal;
 }
 
+footer {
+    margin-right: 25px;
+    margin-bottom: 25px;
+    text-align: right;
+}
+
 .current {
     color: #d3a629;
 }
